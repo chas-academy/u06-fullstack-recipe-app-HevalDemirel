@@ -1,8 +1,5 @@
-import { ApplicationConfig } from '@angular/core';
-import { provideRouter } from '@angular/router';
-
-import { routes } from './app.routes';
-
-export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes)]
+ // Example Configuration Constants
+export const appConfig = {
+  apiBaseUrl: 'https://api.example.com',
+  // Add more configuration constants as needed
 };
