@@ -7,11 +7,12 @@ import { LoginComponent } from './pages/login/login.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { RecipeComponent } from './pages/recipe/recipe.component';
+import { SearchComponent } from './pages/search/search.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, NavbarComponent, HttpClientModule, RouterModule, LoginComponent, FooterComponent, RegisterComponent, RecipeComponent],
+  imports: [RouterOutlet, RouterLink, NavbarComponent, HttpClientModule, RouterModule, LoginComponent, FooterComponent, RegisterComponent, RecipeComponent, SearchComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
