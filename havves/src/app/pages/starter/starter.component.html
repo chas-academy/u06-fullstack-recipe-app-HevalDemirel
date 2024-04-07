@@ -2,10 +2,12 @@
   [dishType]="dishType"
   (recipesEmitter)="recieveRecipes($event)"
 ></app-search>
-<div class=" flex justify-center grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4">
+<div
+  class="flex justify-center grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4"
+>
   @for (recipe of recipes; track recipe) {
   <a
-    (click)="goToDetails(recipe)"
+    (click)="recipeDetails(recipe)"
     class="flex flex-col items-center bg-black border border-black-200 shadow md:flex-row md:max-w-xl hover:bg-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
   >
     <img

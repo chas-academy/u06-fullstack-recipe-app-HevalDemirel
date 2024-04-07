@@ -17,7 +17,7 @@ export class DessertComponent {
   recieveRecipes(recipes: any[]) {
     this.recipes = recipes
   }
-  goToDetails(recipe: any) {
+  recipeDetails(recipe: any) {
     let startIndex = recipe.self.indexOf("/v2/") + 4;
     let endIndex = recipe.self.indexOf("?");
     let extractedId = recipe.self.substring(startIndex, endIndex);
