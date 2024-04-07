@@ -27,10 +27,10 @@ export class AuthService {
   login(loginObj:Login) {
     if (!loginObj) return
     console.log(loginObj);
-    return this.http.post<any>('http://127.0.0.1:8000/api/login', loginObj)
+    return this.http.post<any>('https://u06-fullstack-recipe-app-hevaldemirel.onrender.com/api/login', loginObj)
   }
   registerUser(userData: any): Observable<any> {
-    const url = 'http://127.0.0.1:8000/api/register';
+    const url = 'https://u06-fullstack-recipe-app-hevaldemirel.onrender.com/api/register';
     return this.http.post(url, userData);
   }
 
@@ -41,7 +41,7 @@ export class AuthService {
       'Authorization': `Bearer ${token}`
     }
     console.log(headers)
-    return this.http.post<any>('http://127.0.0.1:8000/api/logout', {}, {
+    return this.http.post<any>('https://u06-fullstack-recipe-app-hevaldemirel.onrender.com/api/logout', {}, {
       headers
     })
   }
