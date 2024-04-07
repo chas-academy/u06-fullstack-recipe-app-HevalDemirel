@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { RecipeService } from '../services/recipe.service';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-recipe',
   standalone: true,
-  imports: [],
+  imports: [CommonModule,FormsModule,RouterLink],
   templateUrl: './recipe.component.html',
   styleUrl: './recipe.component.css'
 })
