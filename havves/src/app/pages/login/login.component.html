@@ -1,1 +1,43 @@
-<p>login works!</p>
+
+<div class="parent">
+    <div class="login-box">
+      <h2>Login</h2>
+  
+      <form>
+        <div class="user-box">
+          <input
+            type="email"
+            [(ngModel)]="loginObj.email"
+            name="email"
+            required
+          />
+          <label>Email</label>
+        </div>
+  
+        <div class="user-box">
+          <input
+            type="password"
+            [(ngModel)]="loginObj.password"
+            name="password"
+            required
+          />
+  
+          <label>Password</label>
+          <a  class="signupbtn"  routerLink='/signup'>Sign up</a>  
+        </div>
+        <button type="button" class="btn" (click)="onLogin()">
+          <span></span>
+  
+          <span></span>
+  
+          <span></span>
+  
+          <span></span>
+          Login
+        </button>
+      </form>
+      @if(showerrormessage){
+      <span class="errormessage">{{ showerrormessage }}</span>
+      }
+    </div>
+  </div>
