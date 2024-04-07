@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class RecipeService {
   private baseUrl = 'https://api.edamam.com/api/recipes/v2';
-  private app_key = '0416dbf6029096425cfec4b2f9d23947';
-  private app_id = '0cbd364c';
+  private app_key = 'dde760ae17ce5e9ade3ff09c0478f8cc';
+  private app_id = '5b9defec';
   private httpOptions = {
     headers: new HttpHeaders({
       accept: 'application/json',
@@ -19,11 +19,11 @@ export class RecipeService {
   getRecipes(
     searchterm: string,
     dishType: string,
-    health: string = '',
+    meal: string = '',
   ): Observable<any> {
     let url = this.baseUrl + '?type=public' + '&q=' + searchterm + '&app_id=' + this.app_id + '&app_key=' + this.app_key + '&dishType=' + dishType + '&random=true'
-    if (health) {
-      url += '&health=' + health;
+    if (meal) {
+      url += '&meal=' + meal;
       }
     console.log(url);
     return this.http.get<any>(url, this.httpOptions);
