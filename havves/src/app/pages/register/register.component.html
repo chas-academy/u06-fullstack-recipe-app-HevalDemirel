@@ -1,1 +1,44 @@
-<p>register works!</p>
+<div class="box">
+    <form (submit)="register()">
+      <h2>Register</h2>
+      <input
+        type="text"
+        [(ngModel)]="registerdetails.name"
+        placeholder="Name"
+        name="name"
+        required
+      />
+      <input
+        type="email"
+        [(ngModel)]="registerdetails.email"
+        placeholder="Email"
+        name="email"
+        required
+      />
+      <input
+        type="password"
+        [(ngModel)]="registerdetails.password"
+        placeholder="Password"
+        name="password"
+        required
+      />
+      <input
+        type="password"
+        [(ngModel)]="registerdetails.password_confirmation"
+        placeholder="Confirm Password"
+        name="password_confirmation"
+        required
+      />
+      <input type="submit"  value="Register" />
+    
+      <div class="login">
+        <a routerLink='/login'>Log in</a>
+      </div>
+    </form>
+  </div>
+  @if(errorMessage){
+  <span class="errormessage">{{ errorMessage }}</span>
+  }
+  
+  
+  
